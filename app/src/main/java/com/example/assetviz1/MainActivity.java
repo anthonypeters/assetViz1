@@ -8,7 +8,24 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.highlight.Highlight;
+import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
+
+
 public class MainActivity extends Activity {
+
+    private static String TAG = "MainActivity";
+
+    private float[] yData = {};
+    private float[] xData = {};
+    PieChart pieChart;
+
 
     //Variables
     int cash;

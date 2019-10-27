@@ -8,8 +8,17 @@
     android:paddingTop="16dp"
     tools:context="com.example.assetviz1.MainActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/sumCategories" />
+
     <com.github.mikephil.charting.charts.PieChart
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/idPieChart"></com.github.mikephil.charting.charts.PieChart>
+        android:id="@+id/idPieChart"
+        android:layout_width="395dp"
+        android:layout_height="695dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="-19dp"></com.github.mikephil.charting.charts.PieChart>
 </RelativeLayout>

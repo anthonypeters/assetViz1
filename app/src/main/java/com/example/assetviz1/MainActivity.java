@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
@@ -200,8 +201,8 @@ public class MainActivity extends Activity {
                         Color.rgb(191, 134, 134), Color.rgb(179, 48, 80), Color.rgb(165, 137, 193),
                         Color.rgb(255, 237, 81), Color.rgb(240, 232, 205)
                 };
-
-                set.setColors(ColorTemplate.createColors(PASTEL_COLORS));
+                
+                set.setColors(ColorTemplate.createColors(ColorTemplate.PASTEL_COLORS));
 
                 pieChart.animateY(3000);
 
@@ -209,6 +210,9 @@ public class MainActivity extends Activity {
 
 
                 pieChart.invalidate();
+                pieChart.setDescription(null);
+                Legend legend = pieChart.getLegend();
+                legend.setEnabled(false);
 
 
 

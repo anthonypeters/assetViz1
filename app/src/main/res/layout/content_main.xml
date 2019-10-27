@@ -1,30 +1,42 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="5dp">
+
+    <TextView
+        android:id="@+id/AssetVisualizer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:textSize="30sp"
+        android:text="@string/asset_visualizer" />
+
+    <TextView
+        android:id="@+id/userInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="@string/please_enter_all_values_in_usd"
+        android:textSize="20sp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="200dp"
         android:orientation="vertical"
         android:id="@+id/linearLayout">
-
-        <TextView
-            android:id="@+id/AssetVisualizer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Asset Visualizer" />
 
         <EditText
             android:id="@+id/cashInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Cash -  "
+            android:hint="@string/cash"
             android:inputType="number"/>
 
         <EditText
@@ -32,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Crypto Currencies - "
+            android:hint="@string/crypto_currencies"
             android:inputType="number" />
 
         <EditText
@@ -40,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Stock - "
+            android:hint="@string/stock"
             android:inputType="number" />
 
         <EditText
@@ -48,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Bonds -"
+            android:hint="@string/bonds"
             android:inputType="number" />
 
         <EditText
@@ -56,7 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Gold/Silver/Etc. -"
+            android:hint="@string/gold_silver_etc"
             android:inputType="number" />
 
         <EditText
@@ -64,7 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Real Estate -"
+            android:hint="@string/real_estate"
             android:inputType="number" />
 
         <EditText
@@ -72,7 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Land -"
+            android:hint="@string/land"
             android:inputType="number" />
 
         <EditText
@@ -80,14 +92,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Vehicles -"
+            android:hint="@string/vehicles"
             android:inputType="number" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Generate Pie Chart" />
+            android:text="@string/generate_pie_chart"
+            android:layout_marginTop="50dp"/>
 
     </LinearLayout>
 

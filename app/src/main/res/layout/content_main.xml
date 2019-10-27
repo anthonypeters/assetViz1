@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/AssetVisualizer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asset Visualizer" />
+
+        <EditText
+            android:id="@+id/cashInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Cash -  "
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/cryptosInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Crypto Currencies - "
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/stocksInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Stock - "
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/bondsInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Bonds -"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/comMoneyInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Gold/Silver/Etc. -"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/realEstateInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Real Estate -"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/landInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Land -"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/vehiclesInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Vehicles -"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Generate Pie Chart" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

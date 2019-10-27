@@ -212,22 +212,25 @@ public class MainActivity extends Activity {
                         PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162), Color.rgb(191, 134, 134)));
                         break;
                     case 5:
-                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162), Color.rgb(191, 134, 134),Color.rgb(179, 48, 80)));
+                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162), Color.rgb(191, 134, 134), Color.rgb(179, 48, 80)));
                         break;
                     case 6:
-                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162), Color.rgb(191, 134, 134),Color.rgb(179, 48, 80), Color.rgb(165, 137, 193)));
+                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162), Color.rgb(191, 134, 134), Color.rgb(179, 48, 80), Color.rgb(150, 150, 150)));
                         break;
                     case 7:
-                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162), Color.rgb(191, 134, 134),Color.rgb(179, 48, 80), Color.rgb(165, 137, 193), Color.rgb(255, 237, 81)));
+                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162), Color.rgb(191, 134, 134), Color.rgb(179, 48, 80), Color.rgb(165, 137, 193), Color.rgb(255, 237, 81)));
                         break;
                     case 8:
-                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162), Color.rgb(191, 134, 134),Color.rgb(179, 48, 80), Color.rgb(165, 137, 193), Color.rgb(255, 237, 81),Color.rgb(240, 232, 205)));
+                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162), Color.rgb(191, 134, 134), Color.rgb(179, 48, 80), Color.rgb(165, 137, 193), Color.rgb(255, 237, 81), Color.rgb(240, 232, 205)));
                         break;
                     case 9:
-                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162), Color.rgb(191, 134, 134),Color.rgb(179, 48, 80), Color.rgb(165, 137, 193), Color.rgb(255, 237, 81),Color.rgb(240, 232, 205),Color.rgb(72, 181, 163)));
+                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162), Color.rgb(191, 134, 134), Color.rgb(179, 48, 80), Color.rgb(165, 137, 193), Color.rgb(255, 237, 81), Color.rgb(240, 232, 205), Color.rgb(72, 181, 163)));
                         break;
 
                 }
+
+                //Used for debugging the size of entries prior to the switch statement
+                System.out.println(entries.size());
                 
                 set.setColors(ColorTemplate.createColors(ColorTemplate.PASTEL_COLORS));
 

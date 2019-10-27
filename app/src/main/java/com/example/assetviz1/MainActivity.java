@@ -90,63 +90,63 @@ public class MainActivity extends Activity {
 
 
                 cashString = cashInput.getText().toString();
-                if (cashString.equals("0")){
+                if (cashString.equals("")){
                     cash = 0;
                 } else {
                     cash = Float.valueOf(cashInput.getText().toString());
                 }
 
                 cryptosString = cryptosInput.getText().toString();
-                if (cryptosString.equals("0")){
+                if (cryptosString.equals("")){
                     cryptos = 0;
                 } else {
                     cryptos = Float.valueOf(cryptosInput.getText().toString());
                 }
 
                 stocksString = stocksInput.getText().toString();
-                if (stocksString.equals("0")){
+                if (stocksString.equals("")){
                     stocks = 0;
                 } else {
                     stocks = Float.valueOf(stocksInput.getText().toString());
                 }
 
                 bondsString = bondsInput.getText().toString();
-                if (bondsString.equals("0")){
+                if (bondsString.equals("")){
                     bonds = 0;
                 } else {
                     bonds = Float.valueOf(bondsInput.getText().toString());
                 }
 
                 comMoneyString = comMoneyInput.getText().toString();
-                if (comMoneyString.equals("0")){
+                if (comMoneyString.equals("")){
                     comMoney = 0;
                 } else {
                     comMoney = Float.valueOf(comMoneyInput.getText().toString());
                 }
 
                 realEstateString = realEstateInput.getText().toString();
-                if (realEstateString.equals("0")){
+                if (realEstateString.equals("")){
                     realEstate = 0;
                 } else {
                     realEstate = Float.valueOf(realEstateInput.getText().toString());
                 }
 
                 landString = landInput.getText().toString();
-                if (landString.equals("0")){
+                if (landString.equals("")){
                     land = 0;
                 } else {
                     land = Float.valueOf(landInput.getText().toString());
                 }
 
                 vehiclesString = vehiclesInput.getText().toString();
-                if (vehiclesString.equals("0")){
+                if (vehiclesString.equals("")){
                     vehicles = 0;
                 } else {
                     vehicles = Float.valueOf(vehiclesInput.getText().toString());
                 }
 
                 otherString = otherInput.getText().toString();
-                if (otherString.equals("0")){
+                if (otherString.equals("")){
                     other = 0;
                 } else {
                     other = Float.valueOf(otherInput.getText().toString());
@@ -200,10 +200,10 @@ public class MainActivity extends Activity {
                 switch (entries.size())
                 {
                     case 1:
-                        PASTEL_COLORS.add(Color.rgb(64, 89, 128));
+                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128)));
                         break;
                     case 2:
-                        PASTEL_COLORS.add(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124));
+                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124)));
                         break;
                     case 3:
                         PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162)));
@@ -226,6 +226,7 @@ public class MainActivity extends Activity {
                     case 9:
                         PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162), Color.rgb(191, 134, 134),Color.rgb(179, 48, 80), Color.rgb(165, 137, 193), Color.rgb(255, 237, 81),Color.rgb(240, 232, 205),Color.rgb(72, 181, 163)));
                         break;
+
                 }
                 
                 set.setColors(ColorTemplate.createColors(ColorTemplate.PASTEL_COLORS));

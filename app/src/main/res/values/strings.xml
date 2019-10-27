@@ -16,4 +16,5 @@
     <string name="please_enter_all_values_in_usd_123_45">Please Enter All Values in USD (123.45)</string>
     <string name="stocks">Stocks</string>
     <string name="other">Other</string>
+    <string name="sumCategories">Sum of assets:</string>
 </resources>

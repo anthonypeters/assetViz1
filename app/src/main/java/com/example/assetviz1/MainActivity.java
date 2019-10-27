@@ -87,7 +87,6 @@ public class MainActivity extends Activity {
                     cash = 0;
                 } else {
                     cash = Float.valueOf(cashInput.getText().toString());
-                    entries.add(new PieEntry(cash, "Cash"));
                 }
 
                 cryptosString = cryptosInput.getText().toString();
@@ -95,7 +94,6 @@ public class MainActivity extends Activity {
                     cryptos = 0;
                 } else {
                     cryptos = Float.valueOf(cryptosInput.getText().toString());
-                    entries.add(new PieEntry(cryptos, "Crypto's"));
                 }
 
                 stocksString = stocksInput.getText().toString();
@@ -103,7 +101,6 @@ public class MainActivity extends Activity {
                     stocks = 0;
                 } else {
                     stocks = Float.valueOf(stocksInput.getText().toString());
-                    entries.add(new PieEntry(stocks, "Stocks"));
                 }
 
                 bondsString = bondsInput.getText().toString();
@@ -111,8 +108,6 @@ public class MainActivity extends Activity {
                     bonds = 0;
                 } else {
                     bonds = Float.valueOf(bondsInput.getText().toString());
-                    entries.add(new PieEntry(bonds, "Bonds"));
-
                 }
 
                 comMoneyString = comMoneyInput.getText().toString();
@@ -120,8 +115,6 @@ public class MainActivity extends Activity {
                     comMoney = 0;
                 } else {
                     comMoney = Float.valueOf(comMoneyInput.getText().toString());
-                    entries.add(new PieEntry(comMoney, "Gold/Silver/etc."));
-
                 }
 
                 realEstateString = realEstateInput.getText().toString();
@@ -129,8 +122,6 @@ public class MainActivity extends Activity {
                     realEstate = 0;
                 } else {
                     realEstate = Float.valueOf(realEstateInput.getText().toString());
-                    entries.add(new PieEntry(realEstate, "Real Estate"));
-
                 }
 
                 landString = landInput.getText().toString();
@@ -138,8 +129,6 @@ public class MainActivity extends Activity {
                     land = 0;
                 } else {
                     land = Float.valueOf(landInput.getText().toString());
-                    entries.add(new PieEntry(land, "Land"));
-
                 }
 
                 vehiclesString = vehiclesInput.getText().toString();
@@ -147,8 +136,6 @@ public class MainActivity extends Activity {
                     vehicles = 0;
                 } else {
                     vehicles = Float.valueOf(vehiclesInput.getText().toString());
-                    entries.add(new PieEntry(vehicles, "Vehicles"));
-
                 }
 
                 float sumCategories;
@@ -164,10 +151,29 @@ public class MainActivity extends Activity {
                 float percentLand = (land/sumCategories);
                 float percentVehicles= (vehicles/sumCategories);
 
-
-
-
-
+                float[] assets = {percentCash, percentCryptos, percentStocks, percentBonds, percentcomMoney, percentrealEstate, percentLand, percentVehicles};
+                for (int i = 0; i < 8; i++){
+                    float x = assets[i];
+                    if (x != 0){
+                        if (i == 0){
+                            entries.add(new PieEntry(percentCash*100, "Cash"));
+                        } else if (i == 1){
+                            entries.add(new PieEntry(percentCryptos*100, "Crypto's"));
+                        } else if (i == 2){
+                            entries.add(new PieEntry(percentStocks*100, "Stocks"));
+                        } else if (i == 3){
+                            entries.add(new PieEntry(percentBonds*100, "Bonds"));
+                        } else if (i == 4){
+                            entries.add(new PieEntry(percentcomMoney*100, "Gold/Silver/etc."));
+                        } else if (i == 5){
+                            entries.add(new PieEntry(percentrealEstate*100, "Real Estate"));
+                        } else if (i == 6){
+                            entries.add(new PieEntry(percentLand*100, "Land"));
+                        } else if (i == 7){
+                            entries.add(new PieEntry(percentVehicles*100, "Vehicles"));
+                        }
+                    }
+                }
 
                 PieDataSet set = new PieDataSet(entries, "Legend");
                 PieData data = new PieData(set);

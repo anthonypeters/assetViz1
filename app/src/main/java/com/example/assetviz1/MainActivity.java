@@ -27,6 +27,14 @@ public class MainActivity extends Activity {
 
 
     //Variables
+    String cashString;
+    String cryptosString;
+    String stocksString;
+    String bondsString;
+    String comMoneyString;
+    String realEstateString;
+    String landString;
+    String vehiclesString;
     int cash;
     int cryptos;
     int stocks;
@@ -65,17 +73,58 @@ public class MainActivity extends Activity {
         button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener(){
             public void onClick (View view){
-                cash = Integer.valueOf(cashInput.getText().toString());
-                cryptos = Integer.valueOf(cryptosInput.getText().toString());
-                stocks = Integer.valueOf(stocksInput.getText().toString());
-                bonds = Integer.valueOf(bondsInput.getText().toString());
-                comMoney = Integer.valueOf(comMoneyInput.getText().toString());
-                realEstate = Integer.valueOf(realEstateInput.getText().toString());
-                land = Integer.valueOf(landInput.getText().toString());
-                vehicles = Integer.valueOf(vehiclesInput.getText().toString());
+
+
+                cashString = cashInput.getText().toString();
+                if (cashString.equals("")){
+                    cash = 0;
+                } else {
+                    cash = Integer.valueOf(cashInput.getText().toString());
+                }
+                cryptosString = cryptosInput.getText().toString();
+                if (cryptosString.equals("")){
+                    cryptos = 0;
+                } else {
+                    cryptos = Integer.valueOf(cryptosInput.getText().toString());
+                }
+                stocksString = stocksInput.getText().toString();
+                if (stocksString.equals("")){
+                    stocks = 0;
+                } else {
+                    stocks = Integer.valueOf(stocksInput.getText().toString());
+                }
+                bondsString = bondsInput.getText().toString();
+                if (bondsString.equals("")){
+                    bonds = 0;
+                } else {
+                    bonds = Integer.valueOf(bondsInput.getText().toString());
+                }
+                comMoneyString = comMoneyInput.getText().toString();
+                if (comMoneyString.equals("")){
+                    comMoney = 0;
+                } else {
+                    comMoney = Integer.valueOf(comMoneyInput.getText().toString());
+                }
+                realEstateString = realEstateInput.getText().toString();
+                if (realEstateString.equals("")){
+                    realEstate = 0;
+                } else {
+                    realEstate = Integer.valueOf(realEstateInput.getText().toString());
+                }
+                landString = landInput.getText().toString();
+                if (landString.equals("")){
+                    land = 0;
+                } else {
+                    land = Integer.valueOf(landInput.getText().toString());
+                }
+                vehiclesString = vehiclesInput.getText().toString();
+                if (vehiclesString.equals("")){
+                    vehicles = 0;
+                } else {
+                    vehicles = Integer.valueOf(vehiclesInput.getText().toString());
+                }
+
                 setContentView(R.layout.activity_main);
-
-
 
                 //pieChart = (PieChart) findViewById(R.id.idPieChart);
                 //pieChart.setDescription();

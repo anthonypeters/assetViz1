@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.graphics.Color;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.PieChart;
@@ -82,57 +83,58 @@ public class MainActivity extends Activity {
                 PieChart pieChart = findViewById(R.id.idPieChart);
                 List<PieEntry> entries = new ArrayList<>();
 
+
                 cashString = cashInput.getText().toString();
-                if (cashString.equals("")){
+                if (cashString.equals("0")){
                     cash = 0;
                 } else {
                     cash = Float.valueOf(cashInput.getText().toString());
                 }
 
                 cryptosString = cryptosInput.getText().toString();
-                if (cryptosString.equals("")){
+                if (cryptosString.equals("0")){
                     cryptos = 0;
                 } else {
                     cryptos = Float.valueOf(cryptosInput.getText().toString());
                 }
 
                 stocksString = stocksInput.getText().toString();
-                if (stocksString.equals("")){
+                if (stocksString.equals("0")){
                     stocks = 0;
                 } else {
                     stocks = Float.valueOf(stocksInput.getText().toString());
                 }
 
                 bondsString = bondsInput.getText().toString();
-                if (bondsString.equals("")){
+                if (bondsString.equals("0")){
                     bonds = 0;
                 } else {
                     bonds = Float.valueOf(bondsInput.getText().toString());
                 }
 
                 comMoneyString = comMoneyInput.getText().toString();
-                if (comMoneyString.equals("")){
+                if (comMoneyString.equals("0")){
                     comMoney = 0;
                 } else {
                     comMoney = Float.valueOf(comMoneyInput.getText().toString());
                 }
 
                 realEstateString = realEstateInput.getText().toString();
-                if (realEstateString.equals("")){
+                if (realEstateString.equals("0")){
                     realEstate = 0;
                 } else {
                     realEstate = Float.valueOf(realEstateInput.getText().toString());
                 }
 
                 landString = landInput.getText().toString();
-                if (landString.equals("")){
+                if (landString.equals("0")){
                     land = 0;
                 } else {
                     land = Float.valueOf(landInput.getText().toString());
                 }
 
                 vehiclesString = vehiclesInput.getText().toString();
-                if (vehiclesString.equals("")){
+                if (vehiclesString.equals("0")){
                     vehicles = 0;
                 } else {
                     vehicles = Float.valueOf(vehiclesInput.getText().toString());
@@ -179,8 +181,19 @@ public class MainActivity extends Activity {
                 PieData data = new PieData(set);
                 pieChart.setData(data);
 
-                set.setColors(ColorTemplate.COLORFUL_COLORS);
+                int[] PASTEL_COLORS = {
+                        Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162),
+                        Color.rgb(191, 134, 134), Color.rgb(179, 48, 80), Color.rgb(165, 137, 193),
+                        Color.rgb(255, 237, 81), Color.rgb(240, 232, 205)
+                };
+                
+                set.setColors(ColorTemplate.createColors(PASTEL_COLORS));
+
+                pieChart.animateY(3000);
+
                 pieChart.setCenterText("Asset Portfolio");
+
+
                 pieChart.invalidate();
 
 

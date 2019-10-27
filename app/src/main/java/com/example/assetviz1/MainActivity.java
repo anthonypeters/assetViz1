@@ -39,6 +39,7 @@ public class MainActivity extends Activity {
     String realEstateString;
     String landString;
     String vehiclesString;
+    String otherString;
 
     float cash;
     float cryptos;
@@ -48,6 +49,7 @@ public class MainActivity extends Activity {
     float realEstate;
     float land;
     float vehicles;
+    float other;
 
     //Button
     Button button;
@@ -61,6 +63,7 @@ public class MainActivity extends Activity {
     EditText realEstateInput;
     EditText landInput;
     EditText vehiclesInput;
+    EditText otherInput;
 
     public void onCreate (Bundle information){
         super.onCreate(information);
@@ -74,6 +77,7 @@ public class MainActivity extends Activity {
         realEstateInput = (EditText) findViewById(R.id.realEstateInput);
         landInput = (EditText) findViewById(R.id.landInput);
         vehiclesInput = (EditText) findViewById(R.id.vehiclesInput);
+        otherInput = (EditText) findViewById(R.id.otherInput);
 
         button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener(){
@@ -140,9 +144,16 @@ public class MainActivity extends Activity {
                     vehicles = Float.valueOf(vehiclesInput.getText().toString());
                 }
 
+                otherString = otherInput.getText().toString();
+                if (otherString.equals("0")){
+                    other = 0;
+                } else {
+                    other = Float.valueOf(otherInput.getText().toString());
+                }
+
                 float sumCategories;
 
-                sumCategories = (cash + cryptos + stocks + bonds + comMoney + realEstate + land + vehicles);
+                sumCategories = (cash + cryptos + stocks + bonds + comMoney + realEstate + land + vehicles + other);
 
                 float percentCash = (cash/sumCategories);
                 float percentCryptos = (cryptos/sumCategories);
@@ -152,9 +163,10 @@ public class MainActivity extends Activity {
                 float percentrealEstate = (realEstate/sumCategories);
                 float percentLand = (land/sumCategories);
                 float percentVehicles= (vehicles/sumCategories);
+                float percentOther = (other/sumCategories);
 
-                float[] assets = {percentCash, percentCryptos, percentStocks, percentBonds, percentcomMoney, percentrealEstate, percentLand, percentVehicles};
-                for (int i = 0; i < 8; i++){
+                float[] assets = {percentCash, percentCryptos, percentStocks, percentBonds, percentcomMoney, percentrealEstate, percentLand, percentVehicles, percentOther};
+                for (int i = 0; i < 9; i++){
                     float x = assets[i];
                     if (x != 0){
                         if (i == 0){
@@ -173,6 +185,8 @@ public class MainActivity extends Activity {
                             entries.add(new PieEntry(percentLand*100, "Land"));
                         } else if (i == 7){
                             entries.add(new PieEntry(percentVehicles*100, "Vehicles"));
+                        } else if (i == 8) {
+                            entries.add(new PieEntry(percentOther*100, "Other"));
                         }
                     }
                 }

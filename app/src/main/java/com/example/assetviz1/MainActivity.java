@@ -16,6 +16,8 @@ import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 
+import java.util.*;
+
 
 public class MainActivity extends Activity {
 
@@ -74,7 +76,7 @@ public class MainActivity extends Activity {
         button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener(){
             public void onClick (View view){
-
+                setContentView(R.layout.activity_main);
 
                 cashString = cashInput.getText().toString();
                 if (cashString.equals("")){
@@ -134,8 +136,18 @@ public class MainActivity extends Activity {
 
                 setContentView(R.layout.activity_main);
 
-                //pieChart = (PieChart) findViewById(R.id.idPieChart);
-                //pieChart.setDescription()
+                PieChart pieChart = findViewById(R.id.idPieChart);
+                List<PieEntry> entries = new ArrayList<>();
+                entries.add(new PieEntry(18.5f, "Green"));
+                entries.add(new PieEntry(26.7f, "Yellow"));
+                entries.add(new PieEntry(24.0f, "Red"));
+                entries.add(new PieEntry(30.8f, "Blue"));
+                PieDataSet set = new PieDataSet(entries, "Election Results");
+                PieData data = new PieData(set);
+                pieChart.setData(data);
+                pieChart.invalidate();
+
+
 
 
             }

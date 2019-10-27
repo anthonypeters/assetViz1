@@ -74,6 +74,13 @@ public class MainActivity extends Activity {
                 realEstate = Integer.valueOf(realEstateInput.getText().toString());
                 land = Integer.valueOf(landInput.getText().toString());
                 vehicles = Integer.valueOf(vehiclesInput.getText().toString());
+
+
+
+                pieChart = (PieChart) findViewById(R.id.idPieChart);
+                pieChart.setDescription();
+
+
             }
         });
     }

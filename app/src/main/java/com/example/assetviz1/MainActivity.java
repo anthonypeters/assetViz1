@@ -214,6 +214,9 @@ public class MainActivity extends Activity {
                 Legend legend = pieChart.getLegend();
                 legend.setEnabled(false);
 
+                TextView sumText = findViewById(R.id.textView);
+                String sumDisplay = "Sum: $" + (sumCategories);
+                sumText.setText(sumDisplay);
 
 
 

@@ -151,7 +151,24 @@ public class MainActivity extends Activity {
 
                 }
 
-                
+                float sumCategories;
+
+                sumCategories = (cash + cryptos + stocks + bonds + comMoney + realEstate + land + vehicles);
+
+                float percentCash = (cash/sumCategories);
+                float percentCryptos = (cryptos/sumCategories);
+                float percentStocks = (stocks/sumCategories);
+                float percentBonds = (bonds/sumCategories);
+                float percentcomMoney = (comMoney/sumCategories);
+                float percentrealEstate = (realEstate/sumCategories);
+                float percentLand = (land/sumCategories);
+                float percentVehicles= (vehicles/sumCategories);
+
+
+
+
+
+
                 PieDataSet set = new PieDataSet(entries, "Legend");
                 PieData data = new PieData(set);
                 pieChart.setData(data);

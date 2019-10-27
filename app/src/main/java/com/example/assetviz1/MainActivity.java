@@ -251,11 +251,13 @@ public class MainActivity extends Activity {
                 TextView sumText = findViewById(R.id.textView);
                 String sumDisplay = String.format("Sum: $%.2f", sumCategories);
                 sumText.setText(sumDisplay);
-
+                sumText.setTextSize(24);
+                sumText.setTextColor(Color.rgb(0, 0, 0));
 
 
             }
         });
+
     }
 
 }

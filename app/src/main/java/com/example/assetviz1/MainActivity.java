@@ -240,6 +240,9 @@ public class MainActivity extends Activity {
                 Legend legend = pieChart.getLegend();
                 legend.setEnabled(false);
 
+                TextView sumText = findViewById(R.id.textView);
+                String sumDisplay = String.format("Sum: $%.2f", sumCategories);
+                sumText.setText(sumDisplay);
 
 
 

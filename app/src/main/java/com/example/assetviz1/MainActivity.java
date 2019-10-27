@@ -249,7 +249,7 @@ public class MainActivity extends Activity {
                 legend.setEnabled(false);
 
                 TextView sumText = findViewById(R.id.textView);
-                String sumDisplay = String.format("Sum: $%.2f", sumCategories);
+                String sumDisplay = String.format("Asset Sum: $%.2f", sumCategories);
                 sumText.setText(sumDisplay);
                 sumText.setTextSize(24);
                 sumText.setTextColor(Color.rgb(0, 0, 0));

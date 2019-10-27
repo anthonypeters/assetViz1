@@ -36,14 +36,14 @@ public class MainActivity extends Activity {
     String landString;
     String vehiclesString;
 
-    int cash;
-    int cryptos;
-    int stocks;
-    int bonds;
-    int comMoney;
-    int realEstate;
-    int land;
-    int vehicles;
+    float cash;
+    float cryptos;
+    float stocks;
+    float bonds;
+    float comMoney;
+    float realEstate;
+    float land;
+    float vehicles;
 
     //Button
     Button button;
@@ -80,56 +80,56 @@ public class MainActivity extends Activity {
                 if (cashString.equals("")){
                     cash = 0;
                 } else {
-                    cash = Integer.valueOf(cashInput.getText().toString());
+                    cash = Float.valueOf(cashInput.getText().toString());
                 }
 
                 cryptosString = cryptosInput.getText().toString();
                 if (cryptosString.equals("")){
                     cryptos = 0;
                 } else {
-                    cryptos = Integer.valueOf(cryptosInput.getText().toString());
+                    cryptos = Float.valueOf(cryptosInput.getText().toString());
                 }
 
                 stocksString = stocksInput.getText().toString();
                 if (stocksString.equals("")){
                     stocks = 0;
                 } else {
-                    stocks = Integer.valueOf(stocksInput.getText().toString());
+                    stocks = Float.valueOf(stocksInput.getText().toString());
                 }
 
                 bondsString = bondsInput.getText().toString();
                 if (bondsString.equals("")){
                     bonds = 0;
                 } else {
-                    bonds = Integer.valueOf(bondsInput.getText().toString());
+                    bonds = Float.valueOf(bondsInput.getText().toString());
                 }
 
                 comMoneyString = comMoneyInput.getText().toString();
                 if (comMoneyString.equals("")){
                     comMoney = 0;
                 } else {
-                    comMoney = Integer.valueOf(comMoneyInput.getText().toString());
+                    comMoney = Float.valueOf(comMoneyInput.getText().toString());
                 }
 
                 realEstateString = realEstateInput.getText().toString();
                 if (realEstateString.equals("")){
                     realEstate = 0;
                 } else {
-                    realEstate = Integer.valueOf(realEstateInput.getText().toString());
+                    realEstate = Float.valueOf(realEstateInput.getText().toString());
                 }
 
                 landString = landInput.getText().toString();
                 if (landString.equals("")){
                     land = 0;
                 } else {
-                    land = Integer.valueOf(landInput.getText().toString());
+                    land = Float.valueOf(landInput.getText().toString());
                 }
 
                 vehiclesString = vehiclesInput.getText().toString();
                 if (vehiclesString.equals("")){
                     vehicles = 0;
                 } else {
-                    vehicles = Integer.valueOf(vehiclesInput.getText().toString());
+                    vehicles = Float.valueOf(vehiclesInput.getText().toString());
                 }
 
                 setContentView(R.layout.activity_main);

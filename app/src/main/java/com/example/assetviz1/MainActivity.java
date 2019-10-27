@@ -135,7 +135,7 @@ public class MainActivity extends Activity {
                 setContentView(R.layout.activity_main);
 
                 //pieChart = (PieChart) findViewById(R.id.idPieChart);
-                //pieChart.setDescription();
+                //pieChart.setDescription()
 
 
             }

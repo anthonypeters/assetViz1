@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.Entry;
@@ -74,6 +73,14 @@ public class MainActivity extends Activity {
                 realEstate = Integer.valueOf(realEstateInput.getText().toString());
                 land = Integer.valueOf(landInput.getText().toString());
                 vehicles = Integer.valueOf(vehiclesInput.getText().toString());
+                setContentView(R.layout.activity_main);
+
+
+
+                //pieChart = (PieChart) findViewById(R.id.idPieChart);
+                //pieChart.setDescription();
+
+
             }
         });
     }

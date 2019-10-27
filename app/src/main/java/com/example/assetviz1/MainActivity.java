@@ -215,7 +215,7 @@ public class MainActivity extends Activity {
                 legend.setEnabled(false);
 
                 TextView sumText = findViewById(R.id.textView);
-                String sumDisplay = "Sum: $" + (sumCategories);
+                String sumDisplay = String.format("Sum: $%.2f", sumCategories);
                 sumText.setText(sumDisplay);
 
 

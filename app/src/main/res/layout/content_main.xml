@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/cash"
-            android:inputType="number"/>
+            android:inputType="numberDecimal"/>
 
         <EditText
             android:id="@+id/cryptosInput"
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/crypto_currencies"
-            android:inputType="number" />
+            android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/stocksInput"
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/stock"
-            android:inputType="number" />
+            android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/bondsInput"
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/bonds"
-            android:inputType="number" />
+            android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/comMoneyInput"
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/gold_silver_etc"
-            android:inputType="number" />
+            android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/realEstateInput"
@@ -77,7 +77,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/real_estate"
-            android:inputType="number" />
+            android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/landInput"
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/land"
-            android:inputType="number" />
+            android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/vehiclesInput"
@@ -93,7 +93,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/vehicles"
-            android:inputType="number" />
+            android:inputType="numberDecimal" />
 
         <Button
             android:id="@+id/button"

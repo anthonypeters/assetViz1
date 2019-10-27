@@ -15,6 +15,7 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.formatter.PercentFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
@@ -90,63 +91,63 @@ public class MainActivity extends Activity {
 
 
                 cashString = cashInput.getText().toString();
-                if (cashString.equals("")){
+                if (cashString.equals("0")){
                     cash = 0;
                 } else {
                     cash = Float.valueOf(cashInput.getText().toString());
                 }
 
                 cryptosString = cryptosInput.getText().toString();
-                if (cryptosString.equals("")){
+                if (cryptosString.equals("0")){
                     cryptos = 0;
                 } else {
                     cryptos = Float.valueOf(cryptosInput.getText().toString());
                 }
 
                 stocksString = stocksInput.getText().toString();
-                if (stocksString.equals("")){
+                if (stocksString.equals("0")){
                     stocks = 0;
                 } else {
                     stocks = Float.valueOf(stocksInput.getText().toString());
                 }
 
                 bondsString = bondsInput.getText().toString();
-                if (bondsString.equals("")){
+                if (bondsString.equals("0")){
                     bonds = 0;
                 } else {
                     bonds = Float.valueOf(bondsInput.getText().toString());
                 }
 
                 comMoneyString = comMoneyInput.getText().toString();
-                if (comMoneyString.equals("")){
+                if (comMoneyString.equals("0")){
                     comMoney = 0;
                 } else {
                     comMoney = Float.valueOf(comMoneyInput.getText().toString());
                 }
 
                 realEstateString = realEstateInput.getText().toString();
-                if (realEstateString.equals("")){
+                if (realEstateString.equals("0")){
                     realEstate = 0;
                 } else {
                     realEstate = Float.valueOf(realEstateInput.getText().toString());
                 }
 
                 landString = landInput.getText().toString();
-                if (landString.equals("")){
+                if (landString.equals("0")){
                     land = 0;
                 } else {
                     land = Float.valueOf(landInput.getText().toString());
                 }
 
                 vehiclesString = vehiclesInput.getText().toString();
-                if (vehiclesString.equals("")){
+                if (vehiclesString.equals("0")){
                     vehicles = 0;
                 } else {
                     vehicles = Float.valueOf(vehiclesInput.getText().toString());
                 }
 
                 otherString = otherInput.getText().toString();
-                if (otherString.equals("")){
+                if (otherString.equals("0")){
                     other = 0;
                 } else {
                     other = Float.valueOf(otherInput.getText().toString());
@@ -173,13 +174,13 @@ public class MainActivity extends Activity {
                         if (i == 0){
                             entries.add(new PieEntry(percentCash*100, "Cash"));
                         } else if (i == 1){
-                            entries.add(new PieEntry(percentCryptos*100, "Crypto's"));
+                            entries.add(new PieEntry(percentCryptos*100, "Cryptos"));
                         } else if (i == 2){
                             entries.add(new PieEntry(percentStocks*100, "Stocks"));
                         } else if (i == 3){
                             entries.add(new PieEntry(percentBonds*100, "Bonds"));
                         } else if (i == 4){
-                            entries.add(new PieEntry(percentcomMoney*100, "Gold/Silver/etc."));
+                            entries.add(new PieEntry(percentcomMoney*100, "Tangible"));
                         } else if (i == 5){
                             entries.add(new PieEntry(percentrealEstate*100, "Real Estate"));
                         } else if (i == 6){
@@ -192,45 +193,36 @@ public class MainActivity extends Activity {
                     }
                 }
 
+
+
                 PieDataSet set = new PieDataSet(entries, "Legend");
                 PieData data = new PieData(set);
                 pieChart.setData(data);
 
-                ArrayList<Integer> PASTEL_COLORS = new ArrayList<>();
-                switch (entries.size())
-                {
-                    case 1:
-                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128)));
-                        break;
-                    case 2:
-                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124)));
-                        break;
-                    case 3:
-                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162)));
-                        break;
-                    case 4:
-                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162), Color.rgb(191, 134, 134)));
-                        break;
-                    case 5:
-                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162), Color.rgb(191, 134, 134), Color.rgb(179, 48, 80)));
-                        break;
-                    case 6:
-                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162), Color.rgb(191, 134, 134), Color.rgb(179, 48, 80), Color.rgb(150, 150, 150)));
-                        break;
-                    case 7:
-                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162), Color.rgb(191, 134, 134), Color.rgb(179, 48, 80), Color.rgb(165, 137, 193), Color.rgb(255, 237, 81)));
-                        break;
-                    case 8:
-                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162), Color.rgb(191, 134, 134), Color.rgb(179, 48, 80), Color.rgb(165, 137, 193), Color.rgb(255, 237, 81), Color.rgb(240, 232, 205)));
-                        break;
-                    case 9:
-                        PASTEL_COLORS.addAll(Arrays.asList(Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162), Color.rgb(191, 134, 134), Color.rgb(179, 48, 80), Color.rgb(165, 137, 193), Color.rgb(255, 237, 81), Color.rgb(240, 232, 205), Color.rgb(72, 181, 163)));
-                        break;
 
-                }
+                pieChart.setHoleRadius(30);
+                pieChart.setEntryLabelColor(Color.rgb(0, 0, 0));
+                pieChart.setTransparentCircleRadius(10);
+                set.setSelectionShift(80);
+                set.setValueFormatter(new PercentFormatter());
 
-                
-                set.setColors(PASTEL_COLORS);
+
+                set.setYValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
+
+                set.setValueLinePart1Length(.83f);
+                set.setValueLinePart2Length(0.0f);
+                set.setXValuePosition(PieDataSet.ValuePosition.OUTSIDE_SLICE);
+
+                set.setSliceSpace(2);
+                set.setValueTextSize(14);
+
+                int[] PASTEL_COLORS = {
+                        Color.rgb(64, 89, 128), Color.rgb(149, 165, 124), Color.rgb(217, 184, 162),
+                        Color.rgb(191, 134, 134), Color.rgb(179, 48, 80), Color.rgb(165, 137, 193),
+                        Color.rgb(255, 237, 81), Color.rgb(240, 232, 205)
+                };
+
+                set.setColors(ColorTemplate.createColors(ColorTemplate.PASTEL_COLORS));
 
                 pieChart.animateY(3000);
 

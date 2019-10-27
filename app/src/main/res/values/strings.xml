@@ -2,7 +2,7 @@
     <string name="app_name">assetViz1</string>
     <string name="action_settings">Settings</string>
     <string name="cash">Cash</string>
-    <string name="asset_visualizer">Asset Visualizer</string>
+    <string name="asset_visualizer">Money Circle</string>
     <string name="stock">Stock</string>
     <string name="cryptocurrencies">CryptoCurrencies</string>
     <string name="bonds">Bonds</string>

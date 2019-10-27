@@ -39,6 +39,7 @@ public class MainActivity extends Activity {
     String realEstateString;
     String landString;
     String vehiclesString;
+    String otherString;
 
     float cash;
     float cryptos;
@@ -48,6 +49,7 @@ public class MainActivity extends Activity {
     float realEstate;
     float land;
     float vehicles;
+    float other;
 
     //Button
     Button button;
@@ -61,6 +63,7 @@ public class MainActivity extends Activity {
     EditText realEstateInput;
     EditText landInput;
     EditText vehiclesInput;
+    EditText otherInput;
 
     public void onCreate (Bundle information){
         super.onCreate(information);
@@ -74,6 +77,7 @@ public class MainActivity extends Activity {
         realEstateInput = (EditText) findViewById(R.id.realEstateInput);
         landInput = (EditText) findViewById(R.id.landInput);
         vehiclesInput = (EditText) findViewById(R.id.vehiclesInput);
+        otherInput = (EditText) findViewById(R.id.otherInput);
 
         button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener(){

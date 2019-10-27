@@ -14,4 +14,6 @@
     <string name="crypto_currencies">Crypto Currencies</string>
     <string name="please_enter_all_values_in_usd">Please enter all values in USD</string>
     <string name="please_enter_all_values_in_usd_123_45">Please Enter All Values in USD (123.45)</string>
+    <string name="stocks">Stocks</string>
+    <string name="other">Other</string>
 </resources>

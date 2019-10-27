@@ -74,6 +74,7 @@ public class MainActivity extends Activity {
         vehiclesInput = (EditText) findViewById(R.id.vehiclesInput);
 
         button = (Button) findViewById(R.id.button);
+
         button.setOnClickListener(new View.OnClickListener(){
             public void onClick (View view){
                 setContentView(R.layout.activity_main);
@@ -134,6 +135,19 @@ public class MainActivity extends Activity {
                     vehicles = Float.valueOf(vehiclesInput.getText().toString());
                 }
 
+                float sumCategories;
+
+                sumCategories = (cash + cryptos + stocks + bonds + comMoney + realEstate + land + vehicles);
+
+                float cashPercent = (cash / sumCategories);
+                float cryptosPercent = (cryptos / sumCategories);
+                float stocksPercent = (stocks / sumCategories);
+                float bondsPercent = (bonds / sumCategories);
+                float comMoneyPercent = (comMoney / sumCategories);
+                float realEstatePercent = (realEstate / sumCategories);
+                float landPercent = (land / sumCategories);
+                float vehiclesPercent = (vehicles / sumCategories);
+
                 setContentView(R.layout.activity_main);
 
                 PieChart pieChart = findViewById(R.id.idPieChart);
@@ -150,10 +164,13 @@ public class MainActivity extends Activity {
 
 
 
+
             }
         });
     }
 
 
+    }
 
-}
+
+

@@ -229,10 +229,8 @@ public class MainActivity extends Activity {
 
                 }
 
-                //Used for debugging the size of entries prior to the switch statement
-                System.out.println(entries.size());
                 
-                set.setColors(ColorTemplate.createColors(ColorTemplate.PASTEL_COLORS));
+                set.setColors(PASTEL_COLORS);
 
                 pieChart.animateY(3000);
 
